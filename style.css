@@ -1,0 +1,174 @@
+.container-fluid{
+    padding: 0px;
+}
+
+.hero{
+position: relative;
+background: url("./images/banner-slide/Banner-1.jpg");
+height: 60vh;
+    width: 100%;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+} 
+
+.providingservices{
+    background: url("./images/about/about-banner.jpg");
+height: 80vh;
+    width: 100%;
+    display: flex;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    align-items: center;
+    justify-content: center;
+    margin-top: 20px;
+    
+}
+
+
+.hero-text{
+font-size: 3.2vw;
+font-weight: bold;
+color: rgb(7, 83, 37);
+}
+
+.highlighted-text{
+    background-color:rgb(7, 83, 37);
+    font-size:2.2vw;
+    color: white;
+}
+
+.linetext{
+color: rgb(58, 125, 82);
+font-weight: normal;
+font-size: 1.8vw;
+}
+
+#allProducts{
+    border-radius: 120px
+}
+.fa-user{
+    color: rgb(236, 242, 236);
+    font-size: 35px;
+}
+.btn-acc{
+    color: white ;
+    margin-left: 2px;
+    font-size: 1.8vw;
+}
+.btn-acc:hover{
+font-weight: bold;
+color: white;
+
+
+}
+
+body, html { 
+    height: 100%; 
+    margin: 0; 
+    font-family: Arial, Helvetica, sans-serif; 
+} 
+
+.background { 
+    position: absolute; 
+    height: 100%; 
+    width: 100%; 
+    background-image: url( 
+"./images/banner-slide/Banner-1.jpg"); 
+    background-size: cover; 
+    background-position: center; 
+    filter: blur(10px); 
+    z-index: -1; 
+} 
+
+.signupdiv{
+    display: flex;
+    justify-content:flex-end;
+    height: 50vh;
+    width: 24vh;
+    flex-direction: column;
+    margin: auto;
+}
+
+.custom-control-label{
+    font-size: 0.8rem;
+}
+
+#signout{
+    color:rgb(174, 180, 184);
+    font-size: 1.6rem;
+}
+#afterSigninName{
+    color:rgb(240, 246, 250);
+    font-size: 1.6rem;
+    margin-top: 21px;
+}
+#signout:hover{
+    color:rgb(240, 246, 250);
+}
+
+.card-img-top{
+   
+}
+.card-title{
+    font-size: 1.4rem;
+    font-weight: bold;
+}
+.card{
+    width: 15rem;
+    height: 16rem;
+   margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+.inner-circle{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 60px;
+background-color: rgb(202, 224, 209);
+padding: 15px;
+border-radius: 50%;
+
+    
+} 
+
+.outer-circle{
+    width: 90px;
+    height: 90px;
+    background-color: rgb(255, 255, 255);
+    padding: 13px;
+    border-radius: 50%;
+    border: 2px solid rgb(202, 222, 212);
+
+}
+
+.demo{
+    flex: unset;
+  
+}
+
+
+.card:hover{
+    background-color:rgb(7, 28, 7);
+    color: white;
+    .inner-circle{
+        background-color: rgb(255, 255, 255);
+    }
+    .outer-circle{
+        background-color: rgb(7, 28, 7);
+        border: 2px solid rgb(46, 179, 26);
+    }
+}
+
+#AccounHeading{
+    font-family: 'Lato', sans-serif;
+}
+

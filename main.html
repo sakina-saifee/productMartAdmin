@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produce Mart (home.html)</title>
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+      integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--Navigation Bar-->
+     <!--Navigation section start-->
+    <section class="NavBar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="./images/logo.png" style="width:60px">
+           
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto mx-4">
+                <li class="nav-item active ">
+                  <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="signup.html">Contact</a>
+                  </li>
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li> -->
+               
+              </ul>
+              <form class="form-inline my-2 my-lg-0">
+               <span id="afterSigninName"></span> <a class="btn btn-acc mx-2" href="signup.html" id="changeName "><i class="fa fa-user mx-2"></i>Account</a>                 
+              </i>
+              <li class="nav-item">
+                <a class="nav-link " id ="signout" aria-current="page" href="#">SignOut</a>
+              </li>
+              </form>
+            </div>
+          </nav>
+    </section>
+<!--Navigation section end-->
+
+
+    <!--hero section start-->
+    <section class="hero">
+        
+        <!-- <div>
+            <p class="hero-text">100% Organic</p>    
+            <div class="highlighted-text">Fresh & Natural Farm Food</div>                     
+        </div> -->
+
+        <div class="container">
+            <div class="row">
+                <div class="col-8 col-lg-12 col-md-12">
+                    <div class="  d-flex flex-column justify-content-center align-items-start my-4 mx-2">
+                        <h1 class="hero-text">100% Organic</h1>
+                        <div class="highlighted-text ">Fresh & Natural Farm Food
+                        </div>      
+                       
+                    
+                    </div>
+                </div>
+
+                <div class="col-8 col-lg-6 ">
+                    <p class="linetext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione esse possimus</p>        
+                    <div class="row">
+                        <button class="btn  btn-success p-2 mb-4 mx-4" id="allProducts" type="button" data-bs-toggle="modal" data-bs-target="#screeningbutton">All Products</button>
+                       </div>
+                </div>
+
+            </div>
+
+
+
+
+        </div>
+
+
+    </section>
+ <!--hero section end-->
+
+
+ <!--4 support cards section start-->
+ <section class="supportCard">
+
+  <div class="container-fluid">
+    <div class="row">
+
+ 
+
+      <div class="col-12 col-md-6 col-lg-3">
+        <div class="d-flex card justify-content-md-center">  
+          <div class="outer-circle">
+            <div class="inner-circle">
+              <img src="./images/feature-icon/ui-chat.svg" class="card-img-top " alt="..." st>
+            </div> 
+          </div>
+       
+        
+              <div class="card-body demo">
+                <h5 class="card-title">24/07 Support</h5>
+              </div>
+            </div>
+          </div>
+  <br>
+
+          <div class="col-12 col-md-6 col-lg-3">
+            <div class="d-flex card ">  
+              <div class="outer-circle">
+                <div class="inner-circle">
+                  <img src="./images/feature-icon/truck-loaded.svg" class="card-img-top " alt="..." st>
+                </div> 
+              </div>
+           
+             
+                  <div class="card-body demo">
+                    <h5 class="card-title">Free Shipping</h5>
+                  </div>
+                </div>
+              </div>
+
+
+              <div class="col-12 col-md-6 col-lg-3">
+                <div class="d-flex card ">  
+                  <div class="outer-circle">
+                    <div class="inner-circle">
+                      <img src="./images/feature-icon/wheat.svg" class="card-img-top " alt="..." st>
+                    </div> 
+                  </div>
+               
+                 
+                      <div class="card-body demo">
+                        <h5 class="card-title">Fresh & Healthy</h5>
+                      </div>
+                    </div>
+                  </div>
+
+
+                  <div class="col-12 col-md-6 col-lg-3">
+                    <div class="d-flex card">  
+                      <div class="outer-circle">
+                        <div class="inner-circle">
+                          <img src="./images/feature-icon/lemon.svg" class="card-img-top " alt="..." st>
+                        </div> 
+                      </div>
+                   
+                     
+                          <div class="card-body demo">
+                            <h5 class="card-title">From our Farm</h5>
+                          </div>
+                        </div>
+                      </div>
+
+
+    </div>
+  </div>
+
+
+ </section>
+ <!--4 support cards section end-->
+
+  <!--Providing Services section start-->
+  <section class="providingservices">
+    <div class="container">
+      <div class="row">
+      <div class="col-lg-6 col-sm-8 col-xl-5">
+
+        <div class="about-content">
+
+        </div>
+      </div>
+
+      </div>
+    </div>
+  </section>
+  <!--Providing Services section end-->
+
+  </body>
+
+  <script>
+
+let changeName= document.getElementById('changeName');
+   let afterSigninName =document.querySelector("#afterSigninName");
+   let signoutTag=document.getElementById("signout");
+let currentUser=null;
+
+      //-----Get Username ------//
+function getUsername(){
+    let keeploggedIn=localStorage.getItem("keepmeloggedin");
+console.log(keeploggedIn);
+    if(keeploggedIn=="yes"){
+        
+         currentUser=JSON.parse(localStorage.getItem('user'));
+    }else{
+        currentUser=JSON.parse(sessionStorage.getItem('user'));
+        console.log(currentUser);
+    }
+}
+
+//----------signout---------//
+function Signout(){
+   sessionStorage.removeItem('user');
+   localStorage.removeItem('user');
+   localStorage.removeItem('keepmeloggedin');
+window.location="main.html";
+}
+
+     //-----Window Onload------//
+
+  window.onload=function(){
+    console.log("hi",currentUser);
+    getUsername();
+
+    if(currentUser===null){
+      changeName.innerText="Account";
+   
+      changeName.classList.add("fa");
+      changeName.classList.add("fa-user");
+      changeName.classList.add("btn");
+      signoutTag.style.display="none";
+    }
+    else{
+      afterSigninName.innerText=currentUser;
+      changeName.classList.remove("fa-user");
+     changeName.classList.remove("btn");
+     changeName.style.display="none";
+      signoutTag.href="javascript:Signout()";
+    // signoutLink.innerText="Sign Out";
+    // signoutLink.classList.replace("btn","nav-link");
+    // signoutLink.classList.add("btn-success");
+    // signoutLink.href="javascript:Signout()";
+    }
+}
+
+signoutTag.addEventListener('click',Signout);
+  </script>
+</html>

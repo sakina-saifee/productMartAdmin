@@ -1,0 +1,37 @@
+<div class="container">
+  <div class="row">
+      <div class="col-6 col-lg-5">
+          <div class=" d-flex flex-column justify-content-center align-items-start my-4 ">
+              <h1>Covid-19 Screening Tool</h1>
+              <p>Use this self-assessment tool to help determine whether you need
+               to be tested for COVID-19.<br /><br />You can complete this
+               assessment for yourself or on behalf of someone else, if they are
+               not able.</p>
+          </div>
+         
+
+      </div>
+
+
+      <div class="  col-6 col-lg-5">
+      <div class="d-flex justify-content-end">
+
+         
+              <div class="girl-image hi  pt-5 ">
+                  <img src="./Screener-App/covid19screen.png" width="140px" height="300px">
+              </div>
+          </div>
+      </div>
+     
+    
+
+     
+  </div>
+
+  <div class="row">
+   <button class="  btn-primary  mb-4" type="button" data-bs-toggle="modal" data-bs-target="#screeningbutton">Start Screening</button>
+
+  </div>
+
+</div>
+

@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Produce Mart (home.html)</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+      integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+
+
+    <div class="background"></div> 
+
+    <!--Navigation section start-->
+    <section class="NavBar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="./images/logo.png" style="width:60px">
+           
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+          
+          </nav>
+    </section>
+<!--Navigation section end-->
+
+<!--signup div start-->
+<div class="signupdiv">
+    <h1>LOGIN</h1>
+   
+    <input type="text" placeholder="Username" id="userInp" class="form-control mb-3">
+    <input type="password" placeholder="Password" id="passInp" class="form-control mb-3">
+  
+
+        <div class="custom-control custom-switch">
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="customSwitch1"
+            />
+            <label class="custom-control-label" for="customSwitch1"
+              >Keep me logged in!</label
+            >
+          </div>
+ 
+   
+    <button type="text"  id="loginbtn" class="btn btn-outline-success w-100">Login</button>
+<a href="main.html" class="badge my-3 badge-secondary py-1 w-100 ">Create New Account</a>
+</div>
+<!--signup div end-->
+
+    <script type="module">
+        // Import the functions you need from the SDKs you need
+        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+        // TODO: Add SDKs for Firebase products that you want to use
+        // https://firebase.google.com/docs/web/setup#available-libraries
+      
+        // Your web app's Firebase configuration
+        const firebaseConfig = {
+          apiKey: "AIzaSyAU310lN1zbWINmANqwx0a-cUkdQA47njk",
+          authDomain: "productmartdb.firebaseapp.com",
+          projectId: "productmartdb",
+          storageBucket: "productmartdb.appspot.com",
+          messagingSenderId: "919638342079",
+          appId: "1:919638342079:web:d53cccb50611b1cb8cc90a"
+        };
+      
+        // Initialize Firebase
+        const app = initializeApp(firebaseConfig);
+       // const analytics = getAnalytics(app);
+     import {getDatabase,ref,set,child,get,update,remove } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+     const db=getDatabase(app);
+
+     let username=document.getElementById("userInp");
+     let pass=document.getElementById("passInp");
+     let loginButton= document.getElementById("loginbtn");
+
+      //--------------------------validation----------------------------------------------------------//
+ function isEmptyOrSpaces(str){
+if(str==""){
+    return true;
+}else{
+    return false;
+}
+ }
+    //-----Authentication Process------//
+
+    function AuthenticationUser() {
+
+      if(isEmptyOrSpaces(username.value) || isEmptyOrSpaces(pass.value) )
+    {
+      console.log(username.value);
+        alert("You cannot leave any field empty!");
+       
+    }
+   
+
+    const dbref = ref(db);
+
+    get(child(dbref, "AddUser/"+username.value)).then((snapshot)=>{
+        if(snapshot.exists()){
+            console.log(snapshot.val().Username);
+            let dbpass=decPass(snapshot.val().Password);
+            if(dbpass==pass.value){
+               // alert("Welcome"+ snapshot.val().Username);
+                login(snapshot.val().FullName);  
+            }
+
+        }else{
+            alert("User does not exists");
+        }
+    });
+
+}
+      //-----Decryption Password ------//
+    function decPass(dbpass){
+    var pass12=CryptoJS.AES.decrypt(dbpass,pass.value);
+    return pass12.toString(CryptoJS.enc.Utf8);
+ }
+
+ //-----Login------//
+
+ function login(user){
+    let keeploggedIn=document.getElementById('customSwitch1').checked;
+
+    if(!keeploggedIn){
+        sessionStorage.setItem('user', JSON.stringify(user));
+        window.location="main.html"; 
+    }else{
+        localStorage.setItem('keepmeloggedin','yes');
+        localStorage.setItem('user',JSON.stringify(user));
+        
+        window.location="main.html";
+    }
+  }
+
+loginButton.addEventListener('click',AuthenticationUser);
+
+     </script>
+
+  </body>
+</html>
