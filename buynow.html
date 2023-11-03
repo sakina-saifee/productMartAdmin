@@ -35,7 +35,7 @@
       referrerpolicy="no-referrer"
     />
   </head>
-  <body>
+  <body class="">
     <!--Navigation section start-->
     <section class="NavBar">
       <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -135,210 +135,95 @@
     <section class="about-section hero" style="height: 50vh"></section>
     <!--hero/about-section section end-->
 
-<!--Add ToCart SLider section start-->
-<section class="add-to-cart-slider-section">
-  <div class="container">
-       <!--shopping cart header-->
-    <div class="row">
-      <div class="col-12 col-lg-12 col-xl-12">
-  <div class="cartTab-header ">
-      <h1>ShoppingCart</h1>
- </div>
- </div>
- </div>
-
-  <!--list item 1-->
-    <div class="row ">
-
-      <div class="col-12 col-lg-12 col-xl-12">
-  <div class="items-cart">
-
-    <div class="row inner-row">
-      <div class="col-xl-4 col-sm-4 col-4 col-lg-4 d-flex flex-row">
-<!--product image-->
-    <div class="product-img">
-      <img src="./images/products/product-1.jpg">
-    </div>
-
-    <!--product name-->
-    <div class="product-name">
-      <p>name</p>
-    </div>
-    <!--product price-->
-    <div class="product-name">
-      <p>$100</p>
-    </div>
-      </div>
-
-    </div>
-    
+      <!--add-to-cart-slider-section start-->
+      <section class="add-to-cart-slider-section ">
+        <div class="container">
+             <!--shopping cart header-->
+          <div class="row">
+            <div class="col-12 col-lg-12 col-xl-12">
+        <div class="cartTab-header my-4 ">
+            <h1>Shopping Cart</h1>
+       </div>
+       </div>
+       </div>
       
- </div>
-
- </div>
-
- </div>
-
-<!--btn class for add to cart (close/checkout)-->
-   <div class="row ">
-      <div class="col-12 col-lg-12 col-xl-12">
-  <div class="close-checkout-btn d-flex flex-row  ">
-   <button type="button" class="btn btn-grad">Close</button>
-  <button type="button" class="btn btn-grad">CheckOut</button>
- </div>
- </div>
- </div>
-   
+        <!--list item 1-->
+          <div class="row mt-4 items-cart-outer">
       
-  
-  </div>
+            <div class="col-12 col-lg-12 col-xl-12">
+        <div class="items-cart-inner">
+      
+          <div class="row inner-row ">
+               <!--product image-->
+            <div class="col-xl-3 col-sm-3  col-lg-3 ">
+              <div class="product-image my-2">
+                <img src="./images/products/product-1.jpg" width="90px">
+              </div>
+        </div>
+         <!--product name-->
+        <div class="col-xl-3 col-sm-3  col-lg-3 d-flex justify-content-center align-items-center ">
+          <div class="product-name">
+            <p>name</p>
+          </div>
+          
+          </div>
 
-</section>
-<!--Add To Cart SLider section end-->
+  <!--product price-->
+          <div class="col-xl-3 col-sm-3  col-lg-3 d-flex justify-content-center align-items-center ">
+          <div class="product-price">
+            <p>$100</p>
+          </div>
+            </div>
+            <!--product price indicator-->
+            <div class="product-price-indicator  d-flex justify-content-center align-items-center flex-row">
+              <button class="minus-indicator mx-2 border-0"> <span> < </span></button>
+              <span class=" product-amount"> 1 </span>
+              <button class="plus-indicator mx-2 border-0"> <span> > </span></button>
+           
+            </div>
+        
+           
+      
+          </div>
+          
+            
+       </div>
+      
+       </div>
+      
+       </div>
+      
+      <!--btn class for add to cart (close/checkout)-->
+         <!-- <div class="row ">
+            <div class="col-12 col-lg-12 col-xl-12">
+
+       </div>
+       </div> -->
+         
+            
+        
+        </div>
+        <div class="close-checkout-btn d-flex flex-row mb-3 ">
+          <button type="button" class="btn btn-grad closebtn">Close</button>
+         <button type="button" class="btn btn-grad checkoutbtn">CheckOut</button>
+        </div>
+      </section>
+    <!--add-to-cart-slider-section start-->
+
     <!--Product List section start-->
     <section class="productlist-section">
       <div class="container">
 
 
 <!--row 1 of products start-->
-        <div class="row my-4">
-
-          <!--product 1 (Add to cart)-->
-          <div class="col-lg-3 col-xl-3">
-            <div class="card product1" style="width: 18rem">
-              <img
-                src="./images/products/product-3.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Apple</h5>
-                <p class="card-text">PKR <span class="price">100</span></p>
-                <a href="#" class="btn btn-grad">Add To Cart</a>
-              </div>
-            </div>
-          </div>
-
-            <!--product 2 (Add to cart)-->
-          <div class="col-lg-3 col-xl-3">
-            <div class="card" style="width: 18rem ">
-              <img
-                src="./images/products/product-2.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Orange</h5>
-                <p class="card-text">PKR <span class="price">200</span></p>
-                <a href="#" class="btn btn-grad">Add To Cart</a>
-              </div>
-            </div>
-          </div>
-
-            <!--product 3 (Add to cart)-->
-          <div class="col-lg-3 col-xl-3">
-            <div class="card" style="width: 18rem ">
-              <img
-                src="./images/products/product-1.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Musk Melon</h5>
-                <p class="card-text">PKR <span class="price">300</span></p>
-                <a href="#" class="btn btn-grad">Add To Cart</a>
-              </div>
-            </div>
-          </div>
-
-            <!--product 4 (Add to cart)-->
-          <div class="col-lg-3 col-xl-3">
-            <div class="card" style="width: 18rem ">
-              <img
-                src="./images/products/product-4.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dragon Fruit</h5>
-                <p class="card-text">PKR <span class="price">500</span></p>
-                <a href="#" class="btn btn-grad">Add To Cart</a>
-              </div>
-            </div>
-          </div>
-
-
+        <div class="row my-4 listProductOuter ">
+          <!--through js-->
         </div>
 <!--row 1 of products end-->
 
 <!--row 2 of products start-->
-        <div class="row my-4">
-
-          <!--product 1 (Add to cart)-->
-          <div class="col-lg-3 col-xl-3">
-            <div class="card" style="width: 18rem">
-              <img
-                src="./images/products/product-3.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Apple</h5>
-                <p class="card-text">PKR <span class="price">100</span></p>
-                <a href="#" class="btn btn-grad">Add To Cart</a>
-              </div>
-            </div>
-          </div>
-
-            <!--product 2 (Add to cart)-->
-          <div class="col-lg-3 col-xl-3">
-            <div class="card" style="width: 18rem ">
-              <img
-                src="./images/products/product-2.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Orange</h5>
-                <p class="card-text">PKR <span class="price">200</span></p>
-                <a href="#" class="btn btn-grad">Add To Cart</a>
-              </div>
-            </div>
-          </div>
-
-            <!--product 3 (Add to cart)-->
-          <div class="col-lg-3 col-xl-3">
-            <div class="card" style="width: 18rem ">
-              <img
-                src="./images/products/product-1.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Musk Melon</h5>
-                <p class="card-text">PKR <span class="price">300</span></p>
-                <a href="#" class="btn btn-grad">Add To Cart</a>
-              </div>
-            </div>
-          </div>
-
-            <!--product 4 (Add to cart)-->
-          <div class="col-lg-3 col-xl-3">
-            <div class="card" style="width: 18rem ">
-              <img
-                src="./images/products/product-4.jpg"
-                class="card-img-top"
-                alt="..."
-              />
-              <div class="card-body">
-                <h5 class="card-title">Dragon Fruit"</h5>
-                <p class="card-text">PKR <span class="price">500</span></p>
-                <a href="#" class="btn btn-grad">Add To Cart</a>
-              </div>
-            </div>
-          </div>
-
-
+        <div class="row my-4 listProductOuter">
+            <!--through js-->
         </div>
 <!--row 2 of products end-->
 
@@ -496,4 +381,5 @@
     </section>
     <!--footer section end-->
   </body>
+  <script src="script.js"></script>
 </html>
