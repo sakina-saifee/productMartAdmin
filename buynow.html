@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Add To Cart</title>
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+      integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"
+      integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <!--Navigation section start-->
+    <section class="NavBar">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="./images/logo.png" style="width: 60px" />
+
+        <button
+          class="navbar-toggler collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto mx-4">
+            <li class="nav-item active">
+              <a class="nav-link" href="main.html"
+                >Home <span class="sr-only">(current)</span></a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="product.html">Product</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact</a>
+            </li>
+            <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li> -->
+          </ul>
+
+          <!--add to cart symbol start-->
+          <div class="addtocartdiv">
+            <div class="btndiv">
+              <button type="" class="btn btn-outline-dark" id="addtocart">
+                <i class="fa-solid fa-cart-shopping"></i>
+              </button>
+            </div>
+            <div id="addedtocartnumber" class="bg-danger">0</div>
+          </div>
+
+          <!--add to cart symbol end-->
+
+          <!--account drop down(login/sign out) start-->
+          <form class="form-inline my-2 my-lg-0">
+            <div class="dropdown">
+              <button
+                class="btn btn-acc btn-outline-dark dropdown-toggle"
+                type="button"
+                id="dropdownMenuButton1"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                <i class="fa fa-user mx-2"></i>Account
+              </button>
+
+              <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                <li>
+                  <a class="dropdown-item" id="loginbtn" href="login.html"
+                    >Login
+                  </a>
+                </li>
+                <li>
+                  <a class="dropdown-item" id="signoutbtn" href="#">Sign Out</a>
+                </li>
+              </ul>
+              <span id="afterSigninName changeName "></span>
+            </div>
+            <!-- <span id="afterSigninName changeName "></span> <a class="btn btn-acc mx-2" href="signup.html" id="changeName "></a>                 
+              -->
+          </form>
+          <!--account drop down(login/sign out) end-->
+        </div>
+      </nav>
+    </section>
+    <!--Navigation section end-->
+
+    <!--hero/about-section section start-->
+    <section class="about-section hero" style="height: 50vh"></section>
+    <!--hero/about-section section end-->
+
+<!--Add ToCart SLider section start-->
+<section class="add-to-cart-slider-section">
+  <div class="container">
+       <!--shopping cart header-->
+    <div class="row">
+      <div class="col-12 col-lg-12 col-xl-12">
+  <div class="cartTab-header ">
+      <h1>ShoppingCart</h1>
+ </div>
+ </div>
+ </div>
+
+  <!--list item 1-->
+    <div class="row ">
+
+      <div class="col-12 col-lg-12 col-xl-12">
+  <div class="items-cart">
+
+    <div class="row inner-row">
+      <div class="col-xl-4 col-sm-4 col-4 col-lg-4 d-flex flex-row">
+<!--product image-->
+    <div class="product-img">
+      <img src="./images/products/product-1.jpg">
+    </div>
+
+    <!--product name-->
+    <div class="product-name">
+      <p>name</p>
+    </div>
+    <!--product price-->
+    <div class="product-name">
+      <p>$100</p>
+    </div>
+      </div>
+
+    </div>
+    
+      
+ </div>
+
+ </div>
+
+ </div>
+
+<!--btn class for add to cart (close/checkout)-->
+   <div class="row ">
+      <div class="col-12 col-lg-12 col-xl-12">
+  <div class="close-checkout-btn d-flex flex-row  ">
+   <button type="button" class="btn btn-grad">Close</button>
+  <button type="button" class="btn btn-grad">CheckOut</button>
+ </div>
+ </div>
+ </div>
+   
+      
+  
+  </div>
+
+</section>
+<!--Add To Cart SLider section end-->
+    <!--Product List section start-->
+    <section class="productlist-section">
+      <div class="container">
+
+
+<!--row 1 of products start-->
+        <div class="row my-4">
+
+          <!--product 1 (Add to cart)-->
+          <div class="col-lg-3 col-xl-3">
+            <div class="card product1" style="width: 18rem">
+              <img
+                src="./images/products/product-3.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Apple</h5>
+                <p class="card-text">PKR <span class="price">100</span></p>
+                <a href="#" class="btn btn-grad">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+
+            <!--product 2 (Add to cart)-->
+          <div class="col-lg-3 col-xl-3">
+            <div class="card" style="width: 18rem ">
+              <img
+                src="./images/products/product-2.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Orange</h5>
+                <p class="card-text">PKR <span class="price">200</span></p>
+                <a href="#" class="btn btn-grad">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+
+            <!--product 3 (Add to cart)-->
+          <div class="col-lg-3 col-xl-3">
+            <div class="card" style="width: 18rem ">
+              <img
+                src="./images/products/product-1.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Musk Melon</h5>
+                <p class="card-text">PKR <span class="price">300</span></p>
+                <a href="#" class="btn btn-grad">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+
+            <!--product 4 (Add to cart)-->
+          <div class="col-lg-3 col-xl-3">
+            <div class="card" style="width: 18rem ">
+              <img
+                src="./images/products/product-4.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dragon Fruit</h5>
+                <p class="card-text">PKR <span class="price">500</span></p>
+                <a href="#" class="btn btn-grad">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+<!--row 1 of products end-->
+
+<!--row 2 of products start-->
+        <div class="row my-4">
+
+          <!--product 1 (Add to cart)-->
+          <div class="col-lg-3 col-xl-3">
+            <div class="card" style="width: 18rem">
+              <img
+                src="./images/products/product-3.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Apple</h5>
+                <p class="card-text">PKR <span class="price">100</span></p>
+                <a href="#" class="btn btn-grad">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+
+            <!--product 2 (Add to cart)-->
+          <div class="col-lg-3 col-xl-3">
+            <div class="card" style="width: 18rem ">
+              <img
+                src="./images/products/product-2.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Orange</h5>
+                <p class="card-text">PKR <span class="price">200</span></p>
+                <a href="#" class="btn btn-grad">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+
+            <!--product 3 (Add to cart)-->
+          <div class="col-lg-3 col-xl-3">
+            <div class="card" style="width: 18rem ">
+              <img
+                src="./images/products/product-1.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Musk Melon</h5>
+                <p class="card-text">PKR <span class="price">300</span></p>
+                <a href="#" class="btn btn-grad">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+
+            <!--product 4 (Add to cart)-->
+          <div class="col-lg-3 col-xl-3">
+            <div class="card" style="width: 18rem ">
+              <img
+                src="./images/products/product-4.jpg"
+                class="card-img-top"
+                alt="..."
+              />
+              <div class="card-body">
+                <h5 class="card-title">Dragon Fruit"</h5>
+                <p class="card-text">PKR <span class="price">500</span></p>
+                <a href="#" class="btn btn-grad">Add To Cart</a>
+              </div>
+            </div>
+          </div>
+
+
+        </div>
+<!--row 2 of products end-->
+
+
+      </div>
+    </section>
+    <!--Product List section end-->
+
+    <!--footer section start-->
+    <section class="footer-section mt-3">
+      <div class="container px-5 px-lg-0">
+        <div class="row d-flex justify-content-center align-items-center">
+          <!--Tazaa info-->
+          <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white">
+            <h5 class="font-weight-bold my-4 pt-5 pt-lg-5">Tazza</h5>
+            <p class="mb-4 ps-0 company-details">
+              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae
+              molestias aliquid amet.
+            </p>
+            <div class="text-white">
+              <ul class="list-unstyled text-white">
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-house mx-2"></i>No.96, South City,
+                    London</a
+                  >
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-phone mx-2"></i>+11 342 6434</a>
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa fa-envelope mx-2"></i>info@example.com</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--customer support-->
+          <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white">
+            <h5 class="font-weight-bold my-4 pt-5 pt-lg-5">Customer Support</h5>
+
+            <div class="contact-info text-white">
+              <ul class="list-unstyled text-white">
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket mx-2"></i>About
+                    Us</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket mx-2"></i>Privacy
+                    Policy</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket mx-2"></i>Terms &
+                    Condition</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket mx-2"></i>Product
+                    Returns</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket mx-2"></i>Wholesale
+                    Policy</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--Quick Links-->
+          <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white">
+            <h5 class="font-weight-bold my-4 pt-0 pt-lg-5">Quick Links</h5>
+
+            <div class="contact-info text-white">
+              <ul class="list-unstyled text-white">
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket mx-2"></i>Product</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket mx-2"></i>Terms &
+                    Condition</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket mx-2"></i>Contact</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket mx-2"></i
+                    >Accessories</a
+                  >
+                </li>
+                <li>
+                  <a href="#"
+                    ><i class="fa-solid fa-right-to-bracket mx-2"></i>Terms of
+                    Use</a
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+
+          <!--NewsLetter-->
+          <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white">
+            <h5 class="font-weight-bold my-4 pt-0 pt-lg-5">Newsletter</h5>
+            <div class="form-group">
+              <input
+                type="email"
+                class="form-control bg-transparent"
+                placeholder="Your Email Address Here."
+                class="form-control border-secondary rounded-p"
+              />
+              <button type="button" class="btn btn-grad btn-outline-white">
+                Subscribe
+              </button>
+            </div>
+
+            <h6 class="font-weight-bold my-4">Newsletter</h6>
+
+            <ul class="list-unstyled text-white d-flex flex-row Newsletter">
+              <li>
+                <a href="#"><i class="fab fa-facebook mx-2"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-twitter mx-2"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-linkedin mx-2"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-youtube mx-2"></i></a>
+              </li>
+              <li>
+                <a href="#"><i class="fab fa-facebook mx-2"></i></a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--footer section end-->
+  </body>
+</html>

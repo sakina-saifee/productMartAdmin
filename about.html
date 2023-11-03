@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+      <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>About us</title>
+    <!-- <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/crypto-js/4.2.0/crypto-js.min.js"
+      integrity="sha512-a+SUDuwNzXDvz4XrIcXHuCf089/iJAoN4lmrXJg18XnduKK6YlDHNRalv4yd1N40OKI80tFidF+rqTFKGPoWFQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script> -->
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+      integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+</head>
+<body>
+      <!--Navigation section start-->
+    <section class="NavBar">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <img src="./images/logo.png" style="width:60px">
+           
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+              <ul class="navbar-nav mr-auto mx-4">
+                <li class="nav-item active ">
+                  <a class="nav-link" href="main.html">Home <span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="product.html">Product</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="gallery.html">Gallery</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link " href="contact.html">Contact</a>
+                  </li>
+                <!-- <li class="nav-item dropdown">
+                  <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    Dropdown
+                  </a>
+                  <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                    <a class="dropdown-item" href="#">Action</a>
+                    <a class="dropdown-item" href="#">Another action</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#">Something else here</a>
+                  </div>
+                </li> -->
+               
+              </ul>
+              <!--add to cart symbol start-->
+               <div class="addtocartdiv">
+
+                <div class="btndiv">
+ <button type="" class=" btn btn-outline-dark" id="addtocart" ><i class="fa-solid fa-cart-shopping"></i> </button>
+                </div>
+ <div id="addedtocartnumber" class="bg-danger">
+  0
+ </div>   
+               </div>
+              
+               
+               
+                <!--add to cart symbol end-->
+
+
+              <!--account drop down(login/sign out) start-->
+              <form class="form-inline my-2 my-lg-0">
+                <div class="dropdown">
+  <button class="btn btn-acc btn-outline-dark  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa fa-user mx-2"></i>Account
+  </button>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item"id ="loginbtn" href="login.html">Login </a></li>
+    <li><a class="dropdown-item" id ="signoutbtn" href="#">Sign Out</a></li>
+   
+  </ul><span id="afterSigninName changeName "></span>
+</div>
+               <!-- <span id="afterSigninName changeName "></span> <a class="btn btn-acc mx-2" href="signup.html" id="changeName "></a>                 
+              -->
+              
+              </form>
+              <!--account drop down(login/sign out) end-->
+            </div>
+          </nav>
+    </section>
+<!--Navigation section end-->
+
+
+    <!--hero/about-section section start-->
+    <section class=" about-section hero" style="height:50vh">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-8 col-lg-12 col-md-12">
+                    <div class="  d-flex flex-column justify-content-center align-items-start my-4 mx-2">             
+                       <h1 class="main-header-banner">ABOUT US</h1>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </section>
+ <!--hero/about-section section end-->
+
+ <!-- about us content section start-->
+ <section class="about-us-content">
+    <div class="container">
+
+        <div class="row">
+            <div class="d-flex justify-content-center align-items-center flex-column col-lg-12">
+                <div class="outer-header my-5 pt-5">
+                    <h2 class="sub-header">About Us</h2>
+                </div>
+                 <div class="inner-content text-center ">
+                   <p>This is one of the unique products which is an excellent thirst beverage<br> and provides relief in the strong summer season</p>
+                </div>
+
+            </div>
+        </div>
+
+<!--row 1 -->
+        <div class="row">
+             <div class="content-row1 d-flex flex-row justify-content-between "></div>
+            <div class="col-lg-6 col-xl-6 col-sm-12 mt-4">
+               
+                  <div class="image-box mx-lg-0">
+                    <img src="./images/about/about-img.jpg" alt="" width="500px">
+                </div>
+</div>
+ <div class="col-lg-6 col-xl-6 col-sm-12 mt-4">
+                <div class="desc-box ">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti sed inventore sunt possimus molestias dolores maiores accusamus excepturi eius sapiente ea tempora perspiciatis quibusdam saepe quas architecto, consequatur tempore est asperiores nihil cupiditate eos quis placeat? Quis quisquam totam quas illum, magnam tempore commodi, maxime repellendus voluptatibus architecto voluptate facere! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, quaerat repellendus. Ex doloremque beatae sint autem tempora veniam consectetur laudantium nemo error? Iusto quis aliquam odit, pariatur quaerat exercitationem at non labore, voluptas expedita aut odio. Similique unde excepturi quia molestias cum ex aperiam velit vitae ut. Aperiam, nostrum amet.</p>
+                </div>
+                </div>
+                </div>
+
+              <!--row 2 -->
+        <div class="row">
+             <div class="content-row1 d-flex flex-row justify-content-between "></div>
+            <div class="col-lg-6 col-xl-6 col-sm-12 mt-4">
+               
+                 
+                 <div class="desc-box ">
+                    <p>Lorem Ipsum is simply dummy text of the printing and typesetting industry Lorem ipsum dolor sit amet, consectetur adipisicing elit. Deleniti sed inventore sunt possimus molestias dolores maiores accusamus excepturi eius sapiente ea tempora perspiciatis quibusdam saepe quas architecto, consequatur tempore est asperiores nihil cupiditate eos quis placeat? Quis quisquam totam quas illum, magnam tempore commodi, maxime repellendus voluptatibus architecto voluptate facere! Lorem ipsum dolor sit, amet consectetur adipisicing elit. Sapiente, quaerat repellendus. Ex doloremque beatae sint autem tempora veniam consectetur laudantium nemo error? Iusto quis aliquam odit, pariatur quaerat exercitationem at non labore, voluptas expedita aut odio. Similique unde excepturi quia molestias cum ex aperiam velit vitae ut. Aperiam, nostrum amet <br>
+                   <br>
+                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus doloribus excepturi voluptates! Lorem, ipsum dolor sit amet consectetur adipisicing elit. Omnis natus quam sed!.</p>
+                </div>
+</div>
+ <div class="col-lg-6 col-xl-6 col-sm-12 mt-4">
+                <div class="image-box mx-lg-0">
+                    <img src="./images/about/about-img.jpg" alt="" width="500px">
+                </div>
+                </div>
+                </div> 
+
+            </div>
+ </section>
+ <!-- about us content section end-->
+
+
+
+<!--footer section start-->
+<section class="footer-section mt-3">
+<div class="container px-5 px-lg-0">
+
+  <div class="row d-flex justify-content-center align-items-center">
+    <!--Tazaa info-->
+    <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white ">
+      <h5 class="font-weight-bold my-4 pt-5 pt-lg-5">Tazza</h5>
+      <p class="mb-4 ps-0  company-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae molestias aliquid amet.</p>
+      <div class=" text-white">
+        <ul class="list-unstyled text-white">
+           <li><a href="#"><i class="fa fa-house mx-2"></i>No.96, South City, London</a></li>
+          <li><a href="#"><i class="fa fa-phone mx-2"></i>+11 342 6434</a></li>
+          <li><a href="#"><i class="fa fa-envelope mx-2"></i>info@example.com</a></li>
+         
+        </ul>
+      </div>
+
+    </div>
+
+    <!--customer support-->
+  <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white ">
+      <h5 class="font-weight-bold my-4 pt-5 pt-lg-5">Customer Support</h5>
+    
+      <div class="contact-info text-white">
+        <ul class="list-unstyled text-white">
+           <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>About Us</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Privacy Policy</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Terms & Condition</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Product Returns</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Wholesale Policy</a></li>
+         
+        </ul>
+      </div>
+
+    </div>
+
+    
+    <!--Quick Links-->
+  <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white ">
+      <h5 class="font-weight-bold my-4 pt-0 pt-lg-5">Quick Links</h5>
+    
+      <div class="contact-info text-white">
+        <ul class="list-unstyled text-white">
+           <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Product</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Terms & Condition</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Accessories</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Terms of Use</a></li>
+         
+        </ul>
+      </div>
+    </div>
+
+ <!--NewsLetter-->
+ <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white ">
+      <h5 class="font-weight-bold my-4 pt-0 pt-lg-5">Newsletter</h5>
+      <div class="form-group">
+        <input type="email" class="form-control bg-transparent" placeholder="Your Email Address Here." class="form-control border-secondary rounded-p">
+        <button type="button" class="btn btn-grad btn-outline-white ">Subscribe</button>
+      </div>
+
+      <h6 class="font-weight-bold my-4">Newsletter</h6>
+
+      
+        <ul class="list-unstyled text-white d-flex flex-row Newsletter">
+           <li><a href="#"><i class="fab fa-facebook mx-2 "></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter  mx-2"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin  mx-2"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube  mx-2"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook  mx-2"></i></a></li>
+         
+        </ul>
+     
+    </div>
+
+  </div>
+
+
+
+</div>
+</section>
+<!--footer section end-->
+    
+</body>
+</html>

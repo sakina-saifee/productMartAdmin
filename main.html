@@ -28,7 +28,7 @@
     />
   </head>
   <body>
-    <!--Navigation Bar-->
+   
      <!--Navigation section start-->
     <section class="NavBar">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
@@ -44,16 +44,16 @@
                   <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item">
-                  <a class="nav-link" href="#">About</a>
+                  <a class="nav-link" href="about.html">About</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Product</a>
+                    <a class="nav-link" href="product.html">Product</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link" href="#">Gallery</a>
+                    <a class="nav-link" href="gallery.html">Gallery</a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link " href="signup.html">Contact</a>
+                    <a class="nav-link " href="contact.html">Contact</a>
                   </li>
                 <!-- <li class="nav-item dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -68,13 +68,40 @@
                 </li> -->
                
               </ul>
+                <!--add to cart symbol start-->
+               <div class="addtocartdiv">
+
+                <div class="btndiv">
+ <button type="" class=" btn btn-outline-dark" id="addtocart" ><i class="fa-solid fa-cart-shopping"></i> </button>
+                </div>
+ <div id="addedtocartnumber" class="bg-danger">
+  0
+ </div>   
+               </div>
+              
+               
+               
+                <!--add to cart symbol end-->
+
+
+              <!--account drop down(login/sign out) start-->
               <form class="form-inline my-2 my-lg-0">
-               <span id="afterSigninName"></span> <a class="btn btn-acc mx-2" href="signup.html" id="changeName "><i class="fa fa-user mx-2"></i>Account</a>                 
-              </i>
-              <li class="nav-item">
-                <a class="nav-link " id ="signout" aria-current="page" href="#">SignOut</a>
-              </li>
+                <div class="dropdown">
+  <button class="btn btn-acc btn-outline-dark  dropdown-toggle" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+    <i class="fa fa-user mx-2"></i>Account
+  </button>
+
+  <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+    <li><a class="dropdown-item"id ="loginbtn" href="login.html">Login </a></li>
+    <li><a class="dropdown-item" id ="signoutbtn" href="#">Sign Out</a></li>
+   
+  </ul><span id="afterSigninName changeName "></span>
+</div>
+               <!-- <span id="afterSigninName changeName "></span> <a class="btn btn-acc mx-2" href="signup.html" id="changeName "></a>                 
+              -->
+              
               </form>
+              <!--account drop down(login/sign out) end-->
             </div>
           </nav>
     </section>
@@ -93,7 +120,7 @@
             <div class="row">
                 <div class="col-8 col-lg-12 col-md-12">
                     <div class="  d-flex flex-column justify-content-center align-items-start my-4 mx-2">
-                        <h1 class="hero-text">100% Organic</h1>
+                        <h1 class="sub-header">100% Organic</h1>
                         <div class="highlighted-text ">Fresh & Natural Farm Food
                         </div>      
                        
@@ -104,7 +131,7 @@
                 <div class="col-8 col-lg-6 ">
                     <p class="linetext">Lorem ipsum dolor sit amet consectetur adipisicing elit. Ratione esse possimus</p>        
                     <div class="row">
-                        <button class="btn  btn-success p-2 mb-4 mx-4" id="allProducts" type="button" data-bs-toggle="modal" data-bs-target="#screeningbutton">All Products</button>
+                       <a href="about.html" class="text-decoration-none"> <button class="btn  btn-outline-success mb-4 mx-4 btn-grad " id="allProducts" type="button" data-bs-toggle="modal" data-bs-target="#screeningbutton">All Products</button></a>
                        </div>
                 </div>
 
@@ -123,12 +150,12 @@
  <!--4 support cards section start-->
  <section class="supportCard">
 
-  <div class="container-fluid">
+  <div class="container">
     <div class="row">
 
  
 
-      <div class="col-12 col-md-6 col-lg-3">
+      <div class="col-6 col-lg-3 mb-5" >
         <div class="d-flex card justify-content-md-center">  
           <div class="outer-circle">
             <div class="inner-circle">
@@ -144,7 +171,7 @@
           </div>
   <br>
 
-          <div class="col-12 col-md-6 col-lg-3">
+          <div class="col-6 col-lg-3 mb-5">
             <div class="d-flex card ">  
               <div class="outer-circle">
                 <div class="inner-circle">
@@ -160,7 +187,7 @@
               </div>
 
 
-              <div class="col-12 col-md-6 col-lg-3">
+              <div class="col-6 col-lg-3 mb-5">
                 <div class="d-flex card ">  
                   <div class="outer-circle">
                     <div class="inner-circle">
@@ -176,7 +203,7 @@
                   </div>
 
 
-                  <div class="col-12 col-md-6 col-lg-3">
+                  <div class="col-6 col-lg-3 mb-5">
                     <div class="d-flex card">  
                       <div class="outer-circle">
                         <div class="inner-circle">
@@ -199,6 +226,9 @@
  </section>
  <!--4 support cards section end-->
 
+
+
+
   <!--Providing Services section start-->
   <section class="providingservices">
     <div class="container">
@@ -206,6 +236,15 @@
       <div class="col-lg-6 col-sm-8 col-xl-5">
 
         <div class="about-content">
+          <h1 class="sub-header">We providing services since 1841 proud</h1>
+          <div class="about-details">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Iusto nemo fugit minus.</p>
+         <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum ex praesentium vitae culpa quo, distinctio, voluptas similique voluptatibus, quia ipsa impedit corporis cupiditate eius! Enim?</p>
+         <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Eius sed, doloremque debitis corporis recusa.</p>
+
+         <a href="about.html" class="btn btn-outline-success btn-grad ">Read More</a>
+         
+          </div>
 
         </div>
       </div>
@@ -214,6 +253,395 @@
     </div>
   </section>
   <!--Providing Services section end-->
+
+<!--Our Best Seller Product section start-->
+<section class="best-seller-section">
+<div class="container">
+  <!--Best seller header part-->
+  <div class="row justify-content-center ">
+<div class="col-12">
+ <div class="best-seller-text text-center">
+      <div class="outer-header ">
+    <h2 class="sub-header">Our Best Seller Product</h2>
+      </div>
+
+      <div class="inner-header">
+         <p class="text-capitalize"> The Passage Experienced a surge in popularity during the 1960s when again during the 90's as Desktop Publishers.</p>
+      </div>
+  
+    </div>
+</div>
+  </div>
+
+
+  <!--Best seller cards part-->
+  <div class="row">
+    <!--product 1-->
+    <div class="col-sm-6 col-lg-3 ">
+      <div class="card productcard">
+
+        <div class="fruitlogo">
+          <img src="./images/products/product-1.jpg" alt="">
+        </div>
+
+        <div class="fruit-info d-flex justify-content-between align-items-center mx-2">
+         <h3>MuskMelon</h3>
+         <span>$45 Kg</span>
+        </div>
+
+        <div class="product-detail">
+          <a href="product.html" class="btn btn-grad btn-outline-success w-75">View Products</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!--product 2-->
+      <div class="col-sm-6 col-lg-3 ">
+      <div class="card productcard">
+
+        <div class="fruitlogo">
+          <img src="./images/products/product-2.jpg" alt="">
+        </div>
+
+        <div class="fruit-info d-flex justify-content-between align-items-center mx-2">
+         <h3>Orange</h3>
+         <span>$34.5 Kg</span>
+        </div>
+
+        <div class="product-detail">
+          <a href="product.html" class="btn btn-grad btn-outline-success w-75">View Products</a>
+        </div>
+
+      </div>
+    </div>
+
+    <!--product 3-->
+        <div class="col-sm-6 col-lg-3 ">
+      <div class="card productcard ">
+
+        <div class="fruitlogo">
+          <img src="./images/products/product-3.jpg" alt="">
+        </div>
+
+        <div class="fruit-info d-flex justify-content-between align-items-center mx-2">
+         <h3>Apple</h3>
+         <span>$70 Kg</span>
+        </div>
+
+        <div class="product-detail">
+          <a href="product.html" class="btn btn-grad btn-outline-success w-75">View Products</a>
+        </div>
+
+      </div>
+    </div>
+    <!--product 4-->
+        <div class="col-sm-6 col-lg-3 ">
+      <div class="card productcard">
+
+        <div class="fruitlogo">
+          <img src="./images/products/product-4.jpg" alt="">
+        </div>
+
+        <div class="fruit-info d-flex justify-content-between align-items-center mx-2">
+         <h3>Dragon</h3>
+         <span>$70 Kg</span>
+        </div>
+
+        <div class="product-detail">
+          <a href="product.html" class="btn btn-grad btn-outline-success w-75">View Products</a>
+        </div>
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+
+</div>
+
+
+
+
+
+
+</section>
+<!--Our Best Seller Product section end-->
+
+<!--happy customers section start-->
+<section class="happy-custonmers-section">
+  <div class="container">
+
+<!--header section-->
+    <div class="row justify-content-center align-items-center">
+      <div class="col-12">
+        <div class="happy-customer-header text-center my-5">
+          <div class="customer-header text-capitalize ">
+        <h4 class="sub-header">Our Happy Customer</h4>
+      </div>
+
+      <div class="inner-text text-capitalize">
+        <p>The Passage Experienced a surge in popularity during the 1960s when again during the 90's as Desktop Publishers.</p>
+      </div>
+        </div>
+
+      </div>
+    </div>
+
+    <!--happy customers slider part-->
+    <div class="row justify-content-center">
+<div class="col-xl-8 col-md-10 p-0">
+<div id="carouselExampleDark" class="carousel carousel-dark slide">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+  <div class="carousel-inner">
+    <!--card 1-->
+    <div class="carousel-item active carousel-fade .carousel-item-start " data-bs-interval="10000">
+     
+     <div class="d-sm-flex row">
+      <div class="profile-box col-sm-5">
+  <img src="./images/testimonial/testimonial-1.png" class="d-block w-100 img-fluid" alt="...">
+      </div>
+
+      <div class="col-sm-7">
+        <div class=" card desc-box">
+          <p class="fst-italic">Not only was customer support very fast, but the design is very professiona. Will definitely be looking for new products in the future from this author</p>
+          <div class="my-4">
+            <h4 class="font-weight-bold">Joe Reynolds</h4>
+            <p class="m-0 text-white">Happy cutomers</p>
+          </div>
+
+          <img src="./images/testimonial/qoutes.svg" alt="" width="60px">
+
+        </div>
+      </div>
+     </div>
+      
+    </div>
+     <!--card 2-->
+        <div class="carousel-item " data-bs-interval="10000">
+     
+     <div class="d-sm-flex row">
+      <div class="profile-box col-sm-5">
+  <img src="./images/testimonial/testimonial-1.png" class="d-block w-100 img-fluid" alt="...">
+      </div>
+
+      <div class="col-sm-7">
+        <div class=" card desc-box">
+          <p class="fst-italic">Not only was customer support very fast, but the design is very professiona. Will definitely be looking for new products in the future from this author</p>
+          <div class="my-4">
+            <h4 class="font-weight-bold">Joe Reynolds</h4>
+            <p class="m-0 text-white">Happy cutomers</p>
+          </div>
+
+          <img src="./images/testimonial/qoutes.svg" alt="" width="60px">
+
+        </div>
+      </div>
+     </div>
+      
+    </div>
+     <!--card 3-->
+    <div class="carousel-item " data-bs-interval="10000">
+     
+     <div class="d-sm-flex row">
+      <div class="profile-box col-sm-5">
+  <img src="./images/testimonial/testimonial-1.png" class="img-fluid" alt="...">
+      </div>
+
+      <div class="col-sm-7">
+        <div class=" card desc-box">
+          <p class="fst-italic">Not only was customer support very fast, but the design is very professiona. Will definitely be looking for new products in the future from this author</p>
+          <div class="my-4">
+            <h4 class="font-weight-bold">Joe Reynolds</h4>
+            <p class="m-0 text-white">Happy cutomers</p>
+          </div>
+
+          <img src="./images/testimonial/qoutes.svg" alt="" width="60px">
+
+        </div>
+      </div>
+     </div>
+      
+    </div>
+  </div>
+
+</div>
+
+</div>
+    </div>
+
+
+
+
+
+  </div>
+</section>
+<!--happy customers section end-->
+
+
+<!--gallery section start-->
+<section class="gallery-section">
+  <div class="container">
+    <!--header section-->
+    <div class="row justify-content-center">
+      <div class="col-12 gallery-header">
+        <div class="outer-gallery-header">
+       <h2 class="text-center mt-5 sub-header">Our Gallery</h2>
+        </div>
+     <div class="inner-text text-capitalize">
+        <p>The Passage Experienced a surge in popularity during the 1960s when again during the 90's as Desktop Publishers.</p>
+      </div>
+      </div>
+    </div>
+
+<!--gallery pictures -->
+
+<div class="row justify-content-between">
+
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <a href="./images/gallery/g-1.jpg" data-lightbox="image" data-title="Lemon">
+   <img src="./images/gallery/g-1.jpg" alt="" class="img-fluid rounded-3">
+    </a>
+  </div>
+
+  <div class="col-sm-6 col-lg-4 mb-4">
+    <a href="./images/gallery/g-2.jpg" data-lightbox="image" data-title="Lemon">
+   <img src="./images/gallery/g-2.jpg" alt="" class="img-fluid rounded-3">
+    </a>
+  </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+    <a href="./images/gallery/g-3.jpg" data-lightbox="image" data-title="Lemon">
+   <img src="./images/gallery/g-3.jpg" alt="" class="img-fluid rounded-3">
+    </a>
+  </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+    <a href="./images/gallery/g-4.jpg" data-lightbox="image" data-title="Lemon">
+   <img src="./images/gallery/g-4.jpg" alt="" class="img-fluid rounded-3">
+    </a>
+  </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+    <a href="./images/gallery/g-5.jpg" data-lightbox="image" data-title="Lemon">
+   <img src="./images/gallery/g-5.jpg" alt="" class="img-fluid rounded-3">
+    </a>
+  </div>
+
+    <div class="col-sm-6 col-lg-4 mb-4">
+    <a href="./images/gallery/g-6.jpg" data-lightbox="image" data-title="Lemon">
+   <img src="./images/gallery/g-6.jpg" alt="" class="img-fluid rounded-3">
+    </a>
+  </div>
+ 
+</div>
+
+<!--view more button-->
+<div class="row justify-content-center align-items-center">
+  <div class="col-12">
+    <div class="viewmorebtn d-flex justify-content-center align-items-center">
+ <a href="gallery.html" class="text-decoration-none"><button class="btn-grad btn btn-outline-success">View More</button></a>
+    </div>
+   
+  </div>
+</div>
+
+  </div>
+</section>
+<!--gallery section end-->
+
+
+
+
+<!--footer section start-->
+<section class="footer-section mt-3">
+<div class="container px-5 px-lg-0">
+
+  <div class="row d-flex justify-content-center align-items-center">
+    <!--Tazaa info-->
+    <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white ">
+      <h5 class="font-weight-bold my-4 pt-5 pt-lg-5">Tazza</h5>
+      <p class="mb-4 ps-0  company-details">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Beatae molestias aliquid amet.</p>
+      <div class=" text-white">
+        <ul class="list-unstyled text-white">
+           <li><a href="#"><i class="fa fa-house mx-2"></i>No.96, South City, London</a></li>
+          <li><a href="#"><i class="fa fa-phone mx-2"></i>+11 342 6434</a></li>
+          <li><a href="#"><i class="fa fa-envelope mx-2"></i>info@example.com</a></li>
+         
+        </ul>
+      </div>
+
+    </div>
+
+    <!--customer support-->
+  <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white ">
+      <h5 class="font-weight-bold my-4 pt-5 pt-lg-5">Customer Support</h5>
+    
+      <div class="contact-info text-white">
+        <ul class="list-unstyled text-white">
+           <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>About Us</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Privacy Policy</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Terms & Condition</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Product Returns</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Wholesale Policy</a></li>
+         
+        </ul>
+      </div>
+
+    </div>
+
+    
+    <!--Quick Links-->
+  <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white ">
+      <h5 class="font-weight-bold my-4 pt-0 pt-lg-5">Quick Links</h5>
+    
+      <div class="contact-info text-white">
+        <ul class="list-unstyled text-white">
+           <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Product</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Terms & Condition</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Contact</a></li>
+          <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Accessories</a></li>
+            <li><a href="#"><i class="fa-solid fa-right-to-bracket mx-2"></i>Terms of Use</a></li>
+         
+        </ul>
+      </div>
+    </div>
+
+ <!--NewsLetter-->
+ <div class="col-lg-3 col-sm-6 mb-5 mb-lg-0 pt-5 text-white ">
+      <h5 class="font-weight-bold my-4 pt-0 pt-lg-5">Newsletter</h5>
+      <div class="form-group">
+        <input type="email" class="form-control bg-transparent" placeholder="Your Email Address Here." class="form-control border-secondary rounded-p">
+        <button type="button" class="btn btn-grad btn-outline-white ">Subscribe</button>
+      </div>
+
+      <h6 class="font-weight-bold my-4">Newsletter</h6>
+
+      
+        <ul class="list-unstyled text-white d-flex flex-row Newsletter">
+           <li><a href="#"><i class="fab fa-facebook mx-2 "></i></a></li>
+          <li><a href="#"><i class="fab fa-twitter  mx-2"></i></a></li>
+          <li><a href="#"><i class="fab fa-linkedin  mx-2"></i></a></li>
+          <li><a href="#"><i class="fab fa-youtube  mx-2"></i></a></li>
+          <li><a href="#"><i class="fab fa-facebook  mx-2"></i></a></li>
+         
+        </ul>
+     
+    </div>
+
+  </div>
+
+
+
+</div>
+</section>
+<!--footer section end-->
 
   </body>
 

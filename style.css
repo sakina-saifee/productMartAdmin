@@ -1,174 +1,467 @@
-.container-fluid{
-    padding: 0px;
+.container-fluid {
+  padding: 0px;
 }
 
-.hero{
-position: relative;
-background: url("./images/banner-slide/Banner-1.jpg");
-height: 60vh;
-    width: 100%;
-    display: flex;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
+/*main header for every page top banner*/
+.main-header-banner{
+color: #08311e;
+font-size: 5rem;
+font-weight: bold;
 } 
 
-.providingservices{
-    background: url("./images/about/about-banner.jpg");
-height: 80vh;
-    width: 100%;
-    display: flex;
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    align-items: center;
-    justify-content: center;
-    margin-top: 20px;
-    
-}
-
-
-.hero-text{
-font-size: 3.2vw;
+/*sub header for every page*/
+.sub-header {
+color: #175035;
+font-size: 2.7rem;
 font-weight: bold;
-color: rgb(7, 83, 37);
+}
+/*sub header for every page*/
+.sub-sub-header{
+color: #175035;
+font-size: 1.8rem;
+font-weight: bold;
+}
+.hero {
+  position: relative;
+  background: url("./images/banner-slide/Banner-1.jpg");
+  height: 60vh;
+  width: 100%;
+  display: flex;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  align-items: center;
+  justify-content: center;
 }
 
-.highlighted-text{
-    background-color:rgb(7, 83, 37);
-    font-size:2.2vw;
+.providingservices {
+  background: url("./images/about/about-banner.jpg");
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  padding: 6rem 0;
+  width: 100vw;
+}
+
+.hero-text {
+  font-size: 3.2vw;
+  font-weight: bold;
+  color: rgb(7, 83, 37);
+}
+
+.highlighted-text {
+  background-color: rgb(7, 83, 37);
+  font-size: 2.2vw;
+  color: white;
+}
+
+.linetext {
+  color: rgb(58, 125, 82);
+  font-weight: normal;
+  font-size: 1.8vw;
+}
+
+.fa-user {
+  color: rgb(236, 242, 236);
+  font-size: 25px;
+}
+.btn-acc {
+  color: rgb(20, 19, 19);
+  margin-left: 2px;
+  font-size: 1.8vw;
+}
+.btn-acc:hover {
+  font-weight: bold;
+  color: rgb(7, 83, 37);
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url("./images/banner-slide/Banner-1.jpg");
+  background-size: cover;
+  background-position: center;
+  filter: blur(10px);
+  z-index: -1;
+}
+
+.signupdiv {
+  display: flex;
+  justify-content: flex-end;
+  height: 50vh;
+  width: 24vh;
+  flex-direction: column;
+  margin: auto;
+}
+
+.custom-control-label {
+  font-size: 0.8rem;
+}
+/* login sign up btn start*/
+#signoutbtn {
+  color: rgb(41, 43, 44);
+  font-size: 1rem;
+}
+
+#signoutbtn:hover {
+  color: rgb(7, 28, 7);
+   font-size: 1.6rem;
+   font-weight: bold;
+}
+
+#loginbtn{
+color: rgb(41, 43, 44);
+  font-size: 1rem;
+}
+
+#loginbtn:hover{
+ color: rgb(7, 28, 7);
+   font-size: 1.6rem;
+   font-weight: bold;
+}
+/* login sign up btn end*/
+
+/* account button resizing start */
+#dropdownMenuButton1{
+font-size: 1.4rem;
+color: white;
+}
+/* account button resizing end */
+
+/* add to cart button  start */
+#addtocart{
+  color: white;
+  font-size: 1.4rem;
+
+}
+#addtocart:hover{
+  color: rgb(255, 255, 255);
+  font-size: 1.4rem;
+  background-color: #5681a0;
+
+}
+a.bg-dark:focus, a.bg-dark:hover, button.bg-dark:focus, button.bg-dark:hover {
+    background-color: #333a3f!important;
+}
+
+#addedtocartnumber{
+  display: flex;
+    border: 1x solid #c4cdc3;
+    border-radius: 50%;
+    width: 10px;
+    height: 0px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    top: -24px;
+    right: -32px;
     color: white;
 }
+/* .addtocartnumberdiv{
+  height: 2vh;
+  weight: 8vw;
+  border-radius: 50%;
+  font-size: 1rem;
 
-.linetext{
-color: rgb(58, 125, 82);
-font-weight: normal;
-font-size: 1.8vw;
+  
+} */
+
+/* add to cart button  end */
+
+#afterSigninName {
+  color: rgb(55, 57, 58);
+  font-size: 1.6rem;
+  margin-top: 21px;
+}
+.card-img-top {
+}
+.card-title {
+  font-size: 1.4rem;
+  font-weight: bold;
+}
+.providingservices .card {
+  width: 19rem;
+  height: 16rem;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-#allProducts{
-    border-radius: 120px
-}
-.fa-user{
-    color: rgb(236, 242, 236);
-    font-size: 35px;
-}
-.btn-acc{
-    color: white ;
-    margin-left: 2px;
-    font-size: 1.8vw;
-}
-.btn-acc:hover{
-font-weight: bold;
-color: white;
-
-
+.inner-circle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 60px;
+  background-color: rgb(202, 224, 209);
+  padding: 15px;
+  border-radius: 50%;
 }
 
-body, html { 
-    height: 100%; 
-    margin: 0; 
-    font-family: Arial, Helvetica, sans-serif; 
-} 
-
-.background { 
-    position: absolute; 
-    height: 100%; 
-    width: 100%; 
-    background-image: url( 
-"./images/banner-slide/Banner-1.jpg"); 
-    background-size: cover; 
-    background-position: center; 
-    filter: blur(10px); 
-    z-index: -1; 
-} 
-
-.signupdiv{
-    display: flex;
-    justify-content:flex-end;
-    height: 50vh;
-    width: 24vh;
-    flex-direction: column;
-    margin: auto;
+.outer-circle {
+  width: 90px;
+  height: 90px;
+  background-color: rgb(255, 255, 255);
+  padding: 13px;
+  border-radius: 50%;
+  border: 2px solid rgb(202, 222, 212);
 }
 
-.custom-control-label{
-    font-size: 0.8rem;
+.demo {
+  flex: unset;
 }
 
-#signout{
-    color:rgb(174, 180, 184);
-    font-size: 1.6rem;
-}
-#afterSigninName{
-    color:rgb(240, 246, 250);
-    font-size: 1.6rem;
-    margin-top: 21px;
-}
-#signout:hover{
-    color:rgb(240, 246, 250);
-}
-
-.card-img-top{
-   
-}
-.card-title{
-    font-size: 1.4rem;
-    font-weight: bold;
-}
-.card{
-    width: 15rem;
-    height: 16rem;
-   margin-top: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-   
-}
-
-.inner-circle{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    width: 60px;
-background-color: rgb(202, 224, 209);
-padding: 15px;
-border-radius: 50%;
-
-    
-} 
-
-.outer-circle{
-    width: 90px;
-    height: 90px;
+.providingservices .card:hover {
+  background-color: rgb(7, 28, 7);
+  color: white;
+  .inner-circle {
     background-color: rgb(255, 255, 255);
-    padding: 13px;
-    border-radius: 50%;
-    border: 2px solid rgb(202, 222, 212);
-
+  }
+  .outer-circle {
+    background-color: rgb(7, 28, 7);
+    border: 2px solid rgb(46, 179, 26);
+  }
 }
 
-.demo{
-    flex: unset;
+#AccounHeading {
+  font-family: "Lato", sans-serif;
+}
+/* button bg color gradient */
+
+.btn-grad {
+  background-image: linear-gradient(
+    to right,
+    #3ca55c 0%,
+    #b5ac49 51%,
+    #3ca55c 100%
+  );
+  margin: 10px;
+  padding: 15px 10px;
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 10px;
+  display: block;
+}
+
+.btn-grad:hover {
+  background-position: right center; /* change the direction of the change here */
+  color: #fff;
+  text-decoration: none;
+}
+
+/*best-seller-text*/
+
+.best-seller-text {
+  padding: 2rem 0;
+}
+.productcard {
+  padding: 2rem 2rem;
+}
+
+.best-seller-section .productcard {
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  border: transparent;
+  border: 0.2rem solid rgb(255, 255, 255);
+  padding: 2rem 1rem;
+  transition: all 0.3s ease-in;
+}
+.best-seller-section .productcard .fruitlogo {
+  margin-bottom: 4rem;
+  text-align: center;
+}
+.best-seller-section .productcard .product-detail {
+  background-color: rgb(7, 28, 7);
+  position: absolute;
+  bottom: -22rem;
+  left: 0;
+  right: 0;
+  text-align: center;
+  padding: 3rem 1rem;
+  transition: all 0.5s ease;
+}
+
+.best-seller-section .productcard:hover .product-detail {
+  bottom: 0;
+}
+
+/*happy cutomers sections styling*/
+
+.happy-custonmers-section {
+  background-color: rgb(209, 228, 209);
+  padding-bottom: 4rem;
+  margin-top: 20px;
+}
+
+.happy-custonmers-section .carousel-indicators button {
+  background-color: rgb(22, 43, 22);
+  border-radius: 50%;
+  width: 1rem;
+  height: 1rem;
+  margin-left: 4px;
+}
+.happy-custonmers-section .carousel-indicators {
+  bottom: -2.6rem;
+}
+.happy-custonmers-section .card {
+  background: url("./images/testimonial/testimonial-bg.png");
+  text-align: right;
+  padding: 5rem 1rem 1rem 2rem;
+  border-radius: 0 0.5rem 0.5rem 0;
+  border: 0rem solid transparent;
+}
+.happy-custonmers-section .profile-box img {
+  border-radius: 0.625rem 0 0 3.125rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.happy-custonmers-section .profile-box {
+  background-color: #08311e;
+  padding: 2rem;
+}
+
+.carousel-item {
+  transition: transform 0.6s ease-in-out;
+}
+.carousel-fade .active .carousel-item-start,
+.carousel-fade .active.carousel-item-end {
+  transition: opacity 0s 2.6s;
+}
+
+/*gallery section */
+.gallery-section img {
+  width: 100%;
+  height: 100%;
+}
+/*footer section */
+.footer-section {
+  background: url("./images/footer-bg/footer_bg.png");
+    background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  height: 100%;
+ display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.3rem;
+}
+
+.footer-section ul li a{
+    color: white;
   
 }
 
-
-.card:hover{
-    background-color:rgb(7, 28, 7);
-    color: white;
-    .inner-circle{
-        background-color: rgb(255, 255, 255);
-    }
-    .outer-circle{
-        background-color: rgb(7, 28, 7);
-        border: 2px solid rgb(46, 179, 26);
-    }
+.footer-section .contact-info {
+    line-height: 2.14rem;
 }
 
-#AccounHeading{
-    font-family: 'Lato', sans-serif;
+.footer-section  .Newsletter .fab {
+ display: flex;
+    border: 5px solid #c4cdc3;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    padding: 14px;
+    justify-content: center;
+    align-items: center;
+   
+}
+.footer-section  .Newsletter .fab:hover{
+    cursor: pointer;
+background-color: #25850d;
 }
 
+.footer-section  a{
+    text-decoration: none;
+}
+
+.footer-section .fa-right-to-bracket{
+color:rgb(135, 201, 135);
+}
+
+/* about us section/page */
+.about-section .hero{
+    height: 4vh;
+}
+.about-section .image-box  img{
+  position: absolute;
+    left: 60px;
+}
+  /*gallery-page-content*/
+  .gallery-page-content img{
+height: 100%;
+width:100%;
+  }
+
+.contact-form-box  #exampleFormControlTextarea1{
+    height: auto;
+    width: 34rem;
+    height: 10rem;
+}
+.contact-form-box {
+    background-color:#c4cdc3 ;
+}
+
+.contact-form-box .sub-sub-header{
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+}
+
+  /*product list section css start*/
+  .productlist-section .product1{
+margin-right: 10px;
+
+  }
+  /*product list section css end*/
+
+   /*Add to cart slider section css start*/
+
+.add-to-cart-slider-section{
+    width: 400px;
+    background-color: #c4cdc3 ;
+    color: #08311e;
+    position: fixed;
+    inset: 0 0 0 auto;  /*top right bottom left*/
+   /* display: grid;
+    grid-template-columns: 70px 2fr 100px; /*content inside will be divided into three rows(top middle bottom) */
+   z-index: 2;
+   height: 50vh;
+
+   }
+.cartTab h1{
+    padding: 20px;
+    margin: 0;
+    font-weight: 300;
+  }
+
+  /* .cartTab .close-checkout-btn .btn .btn-grad{
+display: grid;
+grid-template-columns: repeat(2, 1fr); /*divided into 2 equal columns of 1fr each
+position: absolute;
+bottom: 1000px;
+top: 100px;
+    }   */
+
+ .close-checkout-btn  {
+position: absolute;
+    top: 42rem;
+}
+   
+   /*Add to cart slider section css end*/
