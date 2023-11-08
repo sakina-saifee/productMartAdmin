@@ -9,6 +9,20 @@ font-size: 5rem;
 font-weight: bold;
 } 
 
+/*checkout section sub-header & main-header*/
+
+.checkout-section .sub-header {
+  color: #08311e;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
+.checkout-section .main-header-banner {
+  color: #08311e;
+  font-size: 2rem;
+  font-weight: bold;
+}
+
 /*sub header for every page*/
 .sub-header {
 color: #175035;
@@ -494,3 +508,22 @@ position: absolute;
 
    
    /*Add to cart slider section css end*/
+
+     /*checkout section css start*/
+     .icon-tick .fa-circle-check{
+      color: rgb(7, 83, 37);
+      font-size: 4rem;
+     }
+     .icon-tick{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      
+     }
+     .checkout-section .order-status{
+      color: #50bc0d;
+font-size: 1.6rem;
+font-weight: bold;
+     }
+     /*checkout section css end*/
+   
