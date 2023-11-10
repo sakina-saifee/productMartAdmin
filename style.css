@@ -132,13 +132,13 @@ html {
 }
 
 #loginbtn{
-color: rgb(41, 43, 44);
+color: rgb(8, 38, 0);
   font-size: 1rem;
 }
 
 #loginbtn:hover{
- color: rgb(7, 28, 7);
-   font-size: 1.6rem;
+ color: rgb(255, 255, 255);
+   font-size: 1rem;
    font-weight: bold;
 }
 /* login sign up btn end*/
@@ -526,4 +526,10 @@ font-size: 1.6rem;
 font-weight: bold;
      }
      /*checkout section css end*/
+
+     .form-check-label{
+      color: #09b363;
+      font-size: 1 rem;
+    
+     }
    

@@ -48,20 +48,26 @@
 <div class="signupdiv">
     <h1>LOGIN</h1>
    
-    <input type="text" placeholder="Username" id="userInp" class="form-control mb-3">
+    <input type="text" placeholder="Email" id="emailInp" class="form-control mb-3">
     <input type="password" placeholder="Password" id="passInp" class="form-control mb-3">
   
+    <!-- <div class="checkboxes d-flex flex-row ">
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="0" id="admincheckbox" onclick="cbb1()">
+        <label class="form-check-label">
+          As Admin
+        </label>
+      </div>
+      <div class="form-check mx-3 ">
+        <input class="form-check-input" type="checkbox" value="1" id="usercheckbox" onclick="cbb1()">
+        <label class="form-check-label">
+          As User
+        </label>
+      </div>
+    </div> -->
+     
 
-        <div class="custom-control custom-switch">
-            <input
-              type="checkbox"
-              class="custom-control-input"
-              id="customSwitch1"
-            />
-            <label class="custom-control-label" for="customSwitch1"
-              >Keep me logged in!</label
-            >
-          </div>
+         
  
    
     <button type="text"  id="loginbtn" class="btn btn-outline-success w-100">Login</button>
@@ -71,90 +77,137 @@
 
     <script type="module">
         // Import the functions you need from the SDKs you need
-        import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
-        // TODO: Add SDKs for Firebase products that you want to use
-        // https://firebase.google.com/docs/web/setup#available-libraries
-      
-        // Your web app's Firebase configuration
-        const firebaseConfig = {
-          apiKey: "AIzaSyAU310lN1zbWINmANqwx0a-cUkdQA47njk",
-          authDomain: "productmartdb.firebaseapp.com",
-          projectId: "productmartdb",
-          storageBucket: "productmartdb.appspot.com",
-          messagingSenderId: "919638342079",
-          appId: "1:919638342079:web:d53cccb50611b1cb8cc90a"
-        };
-      
-        // Initialize Firebase
-        const app = initializeApp(firebaseConfig);
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    // TODO: Add SDKs for Firebase products that you want to use
+    // https://firebase.google.com/docs/web/setup#available-libraries
+  
+    // Your web app's Firebase configuration
+    const firebaseConfig = {
+      apiKey: "AIzaSyAU310lN1zbWINmANqwx0a-cUkdQA47njk",
+      authDomain: "productmartdb.firebaseapp.com",
+      projectId: "productmartdb",
+      storageBucket: "productmartdb.appspot.com",
+      messagingSenderId: "919638342079",
+      appId: "1:919638342079:web:d53cccb50611b1cb8cc90a"
+    };
+  
+    // Initialize Firebase
+    const app = initializeApp(firebaseConfig);
        // const analytics = getAnalytics(app);
      import {getDatabase,ref,set,child,get,update,remove } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
      const db=getDatabase(app);
 
-     let username=document.getElementById("userInp");
+     //references
+
+     let email=document.getElementById("emailInp");
      let pass=document.getElementById("passInp");
      let loginButton= document.getElementById("loginbtn");
+  //----------------------validation start-----------------------------------//
 
-      //--------------------------validation----------------------------------------------------------//
- function isEmptyOrSpaces(str){
-if(str==""){
-    return true;
-}else{
-    return false;
-}
- }
+
+     function isEmptyOrSpaces(str) {
+      if (str == "") {
+        return true;
+      } else {
+        return false;
+      }
+    }
+  
+    function validation() {
+      let nameregex = /^[a-zA-Z]+$/;
+      let emailregex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
+      let usernameregex = /^[a-zA-Z0-9]{5,}$/;
+  
+      if (isEmptyOrSpaces(email.value) || isEmptyOrSpaces(pass.value)) {
+        alert("You cannot leave any field empty!");
+        return false;
+      }
+  
+  
+      if (!emailregex.test(email.value)) {
+        alert("Enter a valid email");
+        return false;
+      }
+  
+  
+      return true;
+    }
+
     //-----Authentication Process------//
-
+    let adminid=1;
     function AuthenticationUser() {
 
-      if(isEmptyOrSpaces(username.value) || isEmptyOrSpaces(pass.value) )
+      if(isEmptyOrSpaces(email.value) || isEmptyOrSpaces(pass.value) )
     {
-      console.log(username.value);
+      
         alert("You cannot leave any field empty!");
        
     }
-   
+
+      //----------------------validation end-----------------------------------//
+     
+  
 
     const dbref = ref(db);
+    
 
-    get(child(dbref, "AddUser/"+username.value)).then((snapshot)=>{
+    get(child(dbref, "AddAdmin/"+adminid)).then((snapshot)=>{
         if(snapshot.exists()){
-            console.log(snapshot.val().Username);
-            let dbpass=decPass(snapshot.val().Password);
-            if(dbpass==pass.value){
-               // alert("Welcome"+ snapshot.val().Username);
-                login(snapshot.val().FullName);  
+            
+            let dbpass=snapshot.val().Password;
+            let dbemail=snapshot.val().Email;
+            if(dbpass==pass.value && dbemail==email.value){
+               alert("Welcome Admin!");
+                window.location="addProductTodb.html"
             }
 
         }else{
-            alert("User does not exists");
+            alert("Admin does not exist");
         }
     });
 
 }
+
+function insertData(i, mail, passcode) {
+  console.log("hi");
+
+  //add user
+  set(ref(db, "AddAdmin/"+i), {
+
+    Email: mail,
+    Password: passcode
+
+  });
+
+
+
+}
+
+insertData(adminid, "sakina12@gmail.com", 12);
+
       //-----Decryption Password ------//
-    function decPass(dbpass){
-    var pass12=CryptoJS.AES.decrypt(dbpass,pass.value);
-    return pass12.toString(CryptoJS.enc.Utf8);
- }
+//     function decPass(dbpass){
+//     var pass12=CryptoJS.AES.decrypt(dbpass,pass.value);
+//     return pass12.toString(CryptoJS.enc.Utf8);
+//  }
 
  //-----Login------//
 
- function login(user){
-    let keeploggedIn=document.getElementById('customSwitch1').checked;
+//  function login(user){
+//     let keeploggedIn=document.getElementById('customSwitch1').checked;
 
-    if(!keeploggedIn){
-        sessionStorage.setItem('user', JSON.stringify(user));
-        window.location="main.html"; 
-    }else{
-        localStorage.setItem('keepmeloggedin','yes');
-        localStorage.setItem('user',JSON.stringify(user));
+//     if(!keeploggedIn){
+//         sessionStorage.setItem('user', JSON.stringify(user));
+//         window.location="main.html"; 
+//     }else{
+//         localStorage.setItem('keepmeloggedin','yes');
+//         localStorage.setItem('user',JSON.stringify(user));
         
-        window.location="main.html";
-    }
-  }
+//         window.location="main.html";
+//     }
+//   }
 
-loginButton.addEventListener('click',AuthenticationUser);
+loginButton.addEventListener('click', AuthenticationUser);
 
      </script>
 

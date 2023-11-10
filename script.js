@@ -41,7 +41,7 @@ fetch('product.json').then(response=>response.json()).then(data=>{
     //get cart info from local storage
     if(localStorage.getItem('carts')){
         carts=JSON.parse(localStorage.getItem('carts'));
-        localStorage.removeItem("carts");
+       
         addcartToHTML();
     }
     //add to cart red icon on window load
@@ -76,7 +76,9 @@ if(carts.length<=0){
 }
 
   console.log(carts);
-  cart_quantity.innerHTML=carts.length;
+  if(cart_quantity){
+      cart_quantity.innerHTML=carts.length;
+    }
 
   addcartToHTML();
   addCartToMemory();
@@ -86,6 +88,8 @@ if(carts.length<=0){
 function addcartToHTML(){
     // //card slider on js
     // console.log(listproducts)
+    if(listCartHTML){
+
     listCartHTML.innerHTML='';
     carts.forEach((value, key)=>{
         let position_in_listproduct_array=listproducts.findIndex((ind)=>
@@ -139,8 +143,12 @@ function addcartToHTML(){
     })
 }
 
+}
+
 //adding data to HTML
 function addDataToHTML(){
+    if(listProductHTML){
+
 listProductHTML.innerHTML='';
 
   if(listproducts.length>0){
@@ -171,6 +179,8 @@ listProductHTML.innerHTML='';
         //console.log(product)
     })
   }
+}
+
 
 }
 
