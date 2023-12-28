@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Add Product (Admin)</title>
@@ -24,34 +24,94 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
-</head>
-<body>
-    <div class="background"></div> 
+    <!-- <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js"></script>
+    />
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js"></script>
+    />
+    <script src="https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js"></script> -->
+    <!-- <script type="module">
+    import { initializeApp } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js'
+
+    // If you enabled Analytics in your project, add the Firebase SDK for Google Analytics
+    import { getAnalytics } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-analytics.js'
+
+    // Add Firebase products that you want to use
+    import { getAuth } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js'
+    import { getFirestore } from 'https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js'
+  </script> -->
+  </head>
+  <body>
+    <div class="background"></div>
 
     <!--Navigation section start-->
     <section class="NavBar">
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <img src="./images/logo.png" style="width:60px">
-           
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span class="navbar-toggler-icon"></span>
-            </button>
-          
-            
-          </nav>
-    </section>
-<!--Navigation section end-->
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <img src="./images/logo.png" style="width: 60px" />
 
-<!--signup div start-->
-<div class="signupdiv">
-    <h1>Add Product</h1>
-    <input type="text" placeholder="Product Name here.." id="prodnameInp" class="form-control mb-3">
-    <input type="text" placeholder="Enter price $.." id="emailInp" class="form-control mb-3">
-   
-   
-    <button type="text"  id="signupbtn" class="btn btn-outline-success w-100">Add Product</button>
-<a href="login.html" class="badge my-3 badge-secondary py-1 ">Already Have an account?</a>
-</div>
-<!--signup div end-->
-</body>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-toggle="collapse"
+          data-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </nav>
+    </section>
+    <!--Navigation section end-->
+
+    <!--signup div start-->
+    <div class="signupdiv">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 col-lg-12 col-xl-12">
+            <h1 class="text-success">AddProduct</h1>
+          </div>
+        </div>
+      </div>
+
+      <input
+        type="text"
+        placeholder="Product Name here.."
+        id="prodnameInp"
+        class="form-control mb-3"
+      />
+      <input
+        type="text"
+        placeholder="Enter price $.."
+        id="priceInp"
+        class="form-control mb-3"
+      />
+
+      <div class="mb-3">
+        <!-- <label for="formFile" class="form-label"></label> -->
+        <input type="file" id="formFile" />
+        <span class="filetext">hi</span>
+      </div>
+
+      <button
+        type="text"
+        id="addproductbtn"
+        class="btn btn-outline-success w-100"
+      >
+        Add Product
+      </button>
+    </div>
+    <!--signup div end-->
+    <script src="script.js" type="module">
+      // Import the functions you need from the SDKs you need
+      //  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+      // import { getDatabase, ref, set, child, get, update, remove } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-database.js";
+      // import { getStorage, uploadBytesResumable, getDownloadURL, ref as sref } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js";
+      // // TODO: Add SDKs for Firebase products that you want to use
+      // https://firebase.google.com/docs/web/setup#available-libraries
+
+      // Your web app's Firebase configuration
+    
+    </script>
+  </body>
+
 </html>

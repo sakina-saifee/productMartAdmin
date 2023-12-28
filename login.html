@@ -113,25 +113,25 @@
       }
     }
   
-    function validation() {
-      let nameregex = /^[a-zA-Z]+$/;
-      let emailregex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
-      let usernameregex = /^[a-zA-Z0-9]{5,}$/;
+    // function validation() {
+    //   let nameregex = /^[a-zA-Z]+$/;
+    //   let emailregex = /^[a-zA-Z0-9]+@(gmail|yahoo|outlook)\.com$/;
+    //   let usernameregex = /^[a-zA-Z0-9]{5,}$/;
   
-      if (isEmptyOrSpaces(email.value) || isEmptyOrSpaces(pass.value)) {
-        alert("You cannot leave any field empty!");
-        return false;
-      }
-  
-  
-      if (!emailregex.test(email.value)) {
-        alert("Enter a valid email");
-        return false;
-      }
+    //   if (isEmptyOrSpaces(email.value) || isEmptyOrSpaces(pass.value)) {
+    //     alert("You cannot leave any field empty!");
+    //     return false;
+    //   }
   
   
-      return true;
-    }
+    //   if (!emailregex.test(email.value)) {
+    //     alert("Enter a valid email");
+    //     return false;
+    //   }
+  
+  
+    //   return true;
+    // }
 
     //-----Authentication Process------//
     let adminid=1;
@@ -179,8 +179,6 @@ function insertData(i, mail, passcode) {
 
   });
 
-
-
 }
 
 insertData(adminid, "sakina12@gmail.com", 12);
@@ -209,7 +207,7 @@ insertData(adminid, "sakina12@gmail.com", 12);
 
 loginButton.addEventListener('click', AuthenticationUser);
 
-     </script>
+</script>
 
   </body>
 </html>
